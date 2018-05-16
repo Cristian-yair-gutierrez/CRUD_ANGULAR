@@ -1,0 +1,4 @@
+<mat-list-item (click)="onClick(estados)">
+  <img *ngIf="estados.fotoEstadoUrl" mat-list-avatar [src]="estados.fotoEstadoUrl" alt="">   
+  <span mat-line>{{ estados.Descripcion }}</span>
+</mat-list-item>

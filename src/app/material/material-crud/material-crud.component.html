@@ -1,0 +1,120 @@
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+<div class="row padding">
+<div class="col-lg-6">
+    <div class="example-container" *ngIf="show_form_Municipios">
+        <mat-form-field  color="accent">        
+            <mat-select placeholder="Seleccione Estado" [(ngModel)]="selectedValue">      
+                <mat-option *ngFor="let state of estados" [value]="state.idEstado">{{state.Descripcion}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field color="accent">
+            <input matInput placeholder="Ingrese un Nuevo Municipio" #DescripcionMunicipio required>
+        </mat-form-field>
+        <div style="text-align: right">
+            <button mat-fab color="accent" (click)="addMunicipios(selectedValue,DescripcionMunicipio.value); DescripcionMunicipio.value=''">
+                <mat-icon>save</mat-icon>
+            </button>
+            <button mat-fab color="accent" (click)="cancel()">
+                <mat-icon>cancel</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
+    <div class="col-lg-6">        
+        <h3>Actualiza Un Municipio</h3>
+        <div class="text-center">
+        <form #municipioForm="ngForm" (ngSubmit)="onSubmit(municipioForm)"> 
+            <input type="hidden" name="idMunicipio" #idMunicipio="ngModel" [(ngModel)]="municipioService.selectedMunicipio.idMunicipio">
+        
+            <input type="hidden" name="idEstado" #idEstado="ngModel" [(ngModel)]="municipioService.selectedMunicipio.idEstado">
+        
+                <div class="form-group">
+                    <input 
+                    type="text"
+                    class="form-control"
+                    name="Descripcion"
+                    #name="ngModel"
+                    [(ngModel)]="municipioService.selectedMunicipio.Descripcion"
+                    placeholder="Update A Municipio"
+                    >
+                </div>
+        
+                <div class="form-group">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <mat-icon>refresh</mat-icon>
+                        Update A Municipio
+                    </button>
+                    <button class="btn btn-outline-warning" type="reset" (click)="resetForm(municipioForm)">
+                        <mat-icon>restore</mat-icon>
+                        Reset
+                    </button>
+                    <button mat-fab color="accent" (click)="showFormMunicipios()">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+        </form>
+        </div>   
+    </div>
+</div>
+</div>
+<div  class="card-container">
+    <table class="card-content">
+        <thead>
+            <th style="text-align: center">
+                <h3 class="text-primary">Estados</h3>
+            </th>
+            <th style="text-align: center">            
+                <h3 class="text-primary">Municipios</h3>
+            </th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <div *ngIf="error">
+                    <mat-card>{{ error }}</mat-card>
+                </div>
+                <mat-list>
+                    <an-item-estados class="list-group-item" [ngClass]="{'active': selectedItem == item}" (click)="listClick($event, item)" *ngFor="let item of estados" [estados]="item" (onMouseClick)="onMouseClick($event)">
+                    </an-item-estados>                 
+                </mat-list>
+            </td>
+            <td>
+                <div *ngIf="error">
+                    <mat-card>{{ error }}</mat-card>
+                </div>
+                <mat-list>              
+                    <an-item-municipios *ngFor="let item of municipios" [municipios]="item" (remove)="RemoveMunicipio(item)" (update)="Edit(item)">
+                    </an-item-municipios>                                           
+                </mat-list>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+  
+<div class="card-container" *ngIf="!estados && !municipios && !error">
+    <mat-spinner class="card-content"></mat-spinner>
+    <div class="card-content" style="text-align: center">
+        Connectando con el Servidor por favor espere...
+    </div>
+</div>
+
+<!-- <button type="button" class="btn btn-outline-primary" (click)="showInfo()">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success" (click)="showSuccess()">Success</button>
+<button type="button" class="btn btn-outline-danger" (click)="showDanger()">Danger</button>
+<button type="button" class="btn btn-outline-warning"(click)="showWarning()">Warning</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
+<ul class="list-group">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item" >Dapibus ac facilisis in</li>
+    <li class="list-group-item">Morbi leo risus</li>
+    <li class="list-group-item">Porta ac consectetur ac</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+</ul>       -->
+                                                                                    
+                    

@@ -1,0 +1,10 @@
+<mat-list-item>      
+  <img  mat-line mat-list-avatar [src]="DEFAULT_PICTURE"  alt="">    
+  <span  mat-line>{{ municipios.Descripcion }}</span> 
+  <button mat-fab color="accent" (click)="showForEdit(municipios)">
+    <mat-icon>edit</mat-icon>
+  </button>
+  <button mat-fab color="accent" (click)="eliminar(municipios)">
+    <mat-icon>delete</mat-icon>
+  </button>            
+</mat-list-item>
