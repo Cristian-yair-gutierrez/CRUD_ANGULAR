@@ -4,9 +4,9 @@ Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-
 
 
 ## Demo CRUD Final
-![](https://github.com/Cristian-yair-gutierrez/CRUD_ANGULAR/CRUD.gif)
+<a href=""><img src="https://github.com/Cristian-yair-gutierrez/CRUD_ANGULAR/CRUD.gif" title="Demo"/></a>
 
-#Técnologias con la que esta desarrollodo nuestro proyecto
+##Técnologias con la que esta desarrollodo nuestro proyecto
 Base de Datos:
 * SQL Server
 
@@ -16,7 +16,7 @@ Web Api C#
 FrontEnd:
 * Angular 
 
-#Versión de Angular
+##Versión de Angular
 El proyecto está desarrollado sobre la base de Angular 6.
 
 # Ejecutando la aplicación localmente
