@@ -1,8 +1,8 @@
 <!--- Two Column Section -->
 <div class="container-fluid padding">
 <div class="row padding">
-<div class="col-lg-6">
-    <div class="example-container" *ngIf="show_form_Municipios">
+<div class="col-md-6">
+    <div class="card-container" *ngIf="show_form_Municipios">
         <mat-form-field  color="accent">        
             <mat-select placeholder="Seleccione Estado" [(ngModel)]="selectedValue">      
                 <mat-option *ngFor="let state of estados" [value]="state.idEstado">{{state.Descripcion}}</mat-option>
@@ -22,7 +22,7 @@
         </div>
     </div>
 </div>
-    <div class="col-lg-6">        
+    <div class="col-md-6">        
         <h3>Actualiza Un Municipio</h3>
         <div class="text-center">
         <form #municipioForm="ngForm" (ngSubmit)="onSubmit(municipioForm)"> 

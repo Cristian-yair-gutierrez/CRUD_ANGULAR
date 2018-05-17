@@ -1,27 +1,60 @@
-# AngularNet
+# AngularNet CRUD de Estados y Municipios
+Examen de la Unidad #3 de Programacion Web FRONTEND.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
-## Development server
+## Demo CRUD Final
+![](https://github.com/Cristian-yair-gutierrez/CRUD_ANGULAR/CRUD.gif)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#Técnologias con la que esta desarrollodo nuestro proyecto
+Base de Datos:
+* SQL Server
 
-## Code scaffolding
+Web Api C#
+* Visual Studio 2013
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+FrontEnd:
+* Angular 
 
-## Build
+#Versión de Angular
+El proyecto está desarrollado sobre la base de Angular 6.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Ejecutando la aplicación localmente
+## Setup del entorno de desarrollo
+Necesitas instalar:
+* Git
+* Node
+* Visual Studio Code
 
-## Running unit tests
+Instalar `Angular CLI`:
+```
+npm install -g @angular/cli
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Clonar el Repositorio
+```
+git clone https://github.com/Cristian-yair-gutierrez/CRUD_ANGULAR.git
+cd angularNet
+```
 
-## Running end-to-end tests
+## Instala dependencias
+Instalar `node_modules`:
+```
+npm install
+```
+Instalar `Angular Material`:
+```
+npm install --save @angular/material @angular/cdk
+npm install --save @angular/animations
+```
+Instalar `Toastr JS`:
+```
+npm install ngx-toastr --save
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Vista Previa de la Aplicación
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+ng serve --o
+```
+Este comando deberá abrir tu Navegador predeterminado en `http://localhost:4200/`. La app se recarga automáticamente en caso de modificar el código.
