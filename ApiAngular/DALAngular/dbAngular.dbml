@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AngularBDD" Class="dbAngularDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=FISTER;Initial Catalog=AngularBDD;Persist Security Info=True;User ID=sa" SettingsObjectName="DALAngular.Properties.Settings" SettingsPropertyName="AngularBDDConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.spEliminaMunicipio" Method="spEliminaMunicipio">
+    <Parameter Name="pidMunicipio" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertaMunicipio" Method="spInsertaMunicipio">
+    <Parameter Name="pidEstado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdesMunicipio" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="presultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spListaMunicipioByEstados" Method="spListaMunicipioByEstados">
+    <Parameter Name="pidEstado" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="spListaMunicipioByEstadosResult">
+      <Column Name="idMunicipio" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idEstado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spModificaMunicipio" Method="spModificaMunicipio">
+    <Parameter Name="pidMunicipio" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pdescripcionMunicipio" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spListaEstado" Method="spListaEstado">
+    <ElementType Name="spListaEstadoResult">
+      <Column Name="idEstado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fotoEstadoUrl" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

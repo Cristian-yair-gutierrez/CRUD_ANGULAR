@@ -1,0 +1,7 @@
+C:\Users\crist\documents\visual studio 2013\Projects\ApiAngular\BTLAngular\bin\Debug\BTLAngular.dll
+C:\Users\crist\documents\visual studio 2013\Projects\ApiAngular\BTLAngular\bin\Debug\BTLAngular.pdb
+C:\Users\crist\documents\visual studio 2013\Projects\ApiAngular\BTLAngular\bin\Debug\DALAngular.dll
+C:\Users\crist\documents\visual studio 2013\Projects\ApiAngular\BTLAngular\bin\Debug\DALAngular.pdb
+C:\Users\crist\documents\visual studio 2013\Projects\ApiAngular\BTLAngular\obj\Debug\BTLAngular.csprojResolveAssemblyReference.cache
+C:\Users\crist\documents\visual studio 2013\Projects\ApiAngular\BTLAngular\obj\Debug\BTLAngular.dll
+C:\Users\crist\documents\visual studio 2013\Projects\ApiAngular\BTLAngular\obj\Debug\BTLAngular.pdb

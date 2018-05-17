@@ -1,0 +1,5 @@
+c:\users\crist\documents\visual studio 2013\Projects\ApiAngular\DALAngular\bin\Release\DALAngular.dll.config
+c:\users\crist\documents\visual studio 2013\Projects\ApiAngular\DALAngular\bin\Release\DALAngular.dll
+c:\users\crist\documents\visual studio 2013\Projects\ApiAngular\DALAngular\bin\Release\DALAngular.pdb
+c:\users\crist\documents\visual studio 2013\Projects\ApiAngular\DALAngular\obj\Release\DALAngular.dll
+c:\users\crist\documents\visual studio 2013\Projects\ApiAngular\DALAngular\obj\Release\DALAngular.pdb
